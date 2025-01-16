@@ -34,18 +34,13 @@
                     tenetur quae necessitatibus quod distinctio sit ad, maxime magnam adipisci quam doloremque.
                     Similique ea, possimus accusantium soluta animi quam atque quasi deleniti impedit, nulla, minima
                     distinctio assumenda architecto dignissimos.</p>
-                <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
-                    <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">+200</h3>
-                        <p class="text-sm sm:text-base text-gray-300">Happy Client</p>
-                    </div>
-                    <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">+300</h3>
-                        <p class="text-sm sm:text-base text-gray-300">Project</p>
-                    </div>
-                    <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">+7</h3>
-                        <p class="text-sm sm:text-base text-gray-300"> Years Experience</p>
+                <div class="flex justify-center items-center pt-8">
+                    <div class="grid grid-cols-3 gap-4 max-w-lg">
+                        <div v-for="stat in stats" :key="stat.id"
+                            class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
+                            <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">{{ stat.value }}</h3>
+                            <p class="text-sm sm:text-base text-gray-300">{{ stat.label }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,6 +51,10 @@
 <script setup>
 import { ref } from 'vue';
 
+const data = ref(null);
+const loading = ref(true);
+const error = ref(null);
+
 const educations = ref([
     {
         id: 1,
@@ -63,5 +62,23 @@ const educations = ref([
         program: 'D3 - Management Informatics',
         year: '2023',
     },
-])
+]);
+
+const stats = ref([
+    {
+        id: 1,
+        value: '+200',
+        label: 'Happy Client',
+    },
+    {
+        id: 2,
+        value: '+25',
+        label: 'Projects',
+    },
+    {
+        id: 3,
+        value: '+7',
+        label: 'Years Experience',
+    }
+]);
 </script>
