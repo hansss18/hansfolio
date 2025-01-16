@@ -68,7 +68,7 @@ const projects = ref([
     {
         id: 1,
         category: 'web development',
-        image: 'src/assets/project.jpg',
+        image: '/hansfolio/assets/project.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],
@@ -78,7 +78,7 @@ const projects = ref([
     {
         id: 2,
         category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
+        image: '/hansfolio/assets/mobile.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],
@@ -88,7 +88,7 @@ const projects = ref([
     {
         id: 3,
         category: 'web development',
-        image: 'src/assets/project.jpg',
+        image: '/hansfolio/assets/project.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],
@@ -98,7 +98,7 @@ const projects = ref([
     {
         id: 4,
         category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
+        image: '/hansfolio/assets/mobile.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],
@@ -108,7 +108,7 @@ const projects = ref([
     {
         id: 5,
         category: 'web development',
-        image: 'src/assets/project.jpg',
+        image: '/hansfolio/assets/project.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],
@@ -118,7 +118,7 @@ const projects = ref([
     {
         id: 6,
         category: 'Mobile App',
-        image: 'src/assets/mobile.jpg',
+        image: '/hansfolio/assets/mobile.jpg',
         title: 'project 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
         technologies: ['vue.js 3', 'vuex', 'Express'],

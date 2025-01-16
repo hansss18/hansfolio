@@ -52,38 +52,38 @@ import { ref } from 'vue';
 const skills = ref([
     {
         id: 1,
+        name: 'Dart',
+        width: '96%'
+    },
+    {
+        id: 2,
         name: 'HTML & CSS',
         width: '85%'
     },
     {
-        id: 2,
-        name: 'Python',
+        id: 3,
+        name: 'JavaScript',
         width: '70%'
     },
     {
-        id: 3,
-        name: 'JavaScript',
-        width: '98%'
-    },
-    {
         id: 4,
-        name: 'figma',
-        width: '91%'
+        name: 'PHP',
+        width: '60%'
     },
 ]);
 
 const experiences = ref([
     {
         id: 1,
-        role: 'Software Engineer',
-        company: 'Microsoft',
-        date: 'Mar 2023 - September 2024'
+        role: 'Intern Full-stack Developer',
+        company: 'PT. Bejana Investidata Globalindo',
+        date: 'Aug 2023 - December 2023'
     },
     {
         id: 2,
-        role: 'Frontend Developer',
-        company: 'Spotify',
-        date: 'Mar 2022 - September 2023'
+        role: 'Mobile Developer',
+        company: 'PT. Aesthetic Teknologi Indonesia',
+        date: 'Jan 2024 - Now'
     }
 ]);
 </script>

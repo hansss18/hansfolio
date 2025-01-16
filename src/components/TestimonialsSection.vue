@@ -9,7 +9,8 @@
                             class="w-full mx-auto bg-[#111a3e] shadow-lg border border-[#1f1641] p-5 text-white font-light mb-6">
                             <div class="w-full flex mb-4 items-center">
                                 <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                                    <img :src="testimonial.image" alt="testimonial image" loading="lazy">
+                                    <img :src="`/hansfolio/assets/${testimonial.image}`" alt="testimonial image"
+                                        loading="lazy">
                                 </div>
                                 <h6 class="ml-4 font-bold text-sm uppercase text-white">{{ testimonial.fullName }}</h6>
                             </div>
@@ -32,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { Carousel, Navigation, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
@@ -56,34 +57,35 @@ const testimonials = ref([
     {
         id: 1,
         fullName: 'client 1',
-        image: 'src/assets/image.png',
+        image: 'image.png',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
     {
         id: 2,
         fullName: 'client 2',
-        image: 'src/assets/image.png',
+        image: 'image.png',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
     {
         id: 3,
         fullName: 'client 3',
-        image: 'src/assets/image.png',
+        image: 'image.png',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
     {
         id: 4,
         fullName: 'client 4',
-        image: 'src/assets/image.png',
+        image: 'image.png',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
     {
         id: 4,
         fullName: 'client 4',
-        image: 'src/assets/image.png',
+        image: 'image.png',
         comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
-])
+]);
+
 </script>
 
 <style>

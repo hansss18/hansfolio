@@ -8,7 +8,7 @@
                     error vitae, repellendus, odio tenetur!
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolore!
                 </p>
-                <div v-for="contact in contacts" :key="contact.id" class="col-lg-4 col-mb-4 mb-lg-0 mt-5">
+                <div v-for="contact in contacts" :key="contact.id" class="col-lg-4 col-mb-4 mb-lg-0 mt-5 mr-8">
                     <a :href="contact.onclick()" target="_blank" rel="noopener noreferrer"
                         class="flex mb-10 items-center transition transform hover:scale-105 hover:shadow-lg hover:bg-[#162043] rounded-lg p-4">
                         <div class="p-2 transition transform hover:scale-110"

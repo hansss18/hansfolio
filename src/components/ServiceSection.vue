@@ -44,7 +44,7 @@ const services = ref([
     },
     {
         id: 3,
-        icon: 'https://img.icons8.com/external-solid-design-circle/100/ffffff/external-Mobile-Development-digital-marketing-solid-design-circle.png',
+        icon: 'https://img.icons8.com/?size=100&id=qTi7dvhQWqxW&format=png&color=ffffff',
         name: 'Mobile Developer',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, asperiores.'
     },
