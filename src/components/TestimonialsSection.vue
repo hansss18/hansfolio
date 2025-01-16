@@ -58,7 +58,7 @@ const testimonials = ref([
         id: 1,
         fullName: 'client 1',
         image: 'image.png',
-        comment: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
+        comment: 'Lorem update ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellat esse repellendus provident placeat quas quae dolor, aperiam labore officia.',
     },
     {
         id: 2,
