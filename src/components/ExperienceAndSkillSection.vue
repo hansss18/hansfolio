@@ -77,13 +77,13 @@ const experiences = ref([
         id: 1,
         role: 'Intern Full-stack Developer',
         company: 'PT. Bejana Investidata Globalindo',
-        date: 'Aug 2023 - December 2023'
+        date: 'Aug 2022 - December 2022'
     },
     {
         id: 2,
         role: 'Mobile Developer',
         company: 'PT. Aesthetic Teknologi Indonesia',
-        date: 'Jan 2024 - Now'
+        date: 'Jan 2023 - Now'
     }
 ]);
 </script>

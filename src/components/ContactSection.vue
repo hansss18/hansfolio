@@ -3,10 +3,10 @@
         <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Let's Connect</h2>
         <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8 items-center" data-aos="zoom-in-up">
             <div>
-                <p class="text-[#adb7be]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ad consequuntur
-                    quaerat ullam? Voluptas ullam sequi impedit, aliquid ea quia autem dolore nihil officiis voluptate
-                    error vitae, repellendus, odio tenetur!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolore!
+                <p class="text-[#adb7be]">
+                    I'm here to help. Whether you have questions or want to discuss how we can collaborate, feel free to
+                    reach out through any of the options below. I'm always ready to listen and provide the best
+                    solutions for your needs. Get in touch now, I'd love to hear your story!
                 </p>
                 <div v-for="contact in contacts" :key="contact.id" class="col-lg-4 col-mb-4 mb-lg-0 mt-5 mr-8">
                     <a :href="contact.onclick()" target="_blank" rel="noopener noreferrer"
@@ -72,15 +72,6 @@ const contacts = ref([
     },
     {
         id: 2,
-        title: 'Phone',
-        subtitle: '+6285782255655',
-        idIcon: '16733',
-        onclick() {
-            return ` https://wa.me/${this.subtitle}`;
-        },
-    },
-    {
-        id: 3,
         title: 'Linkedin',
         subtitle: 'www.linkedin.com',
         idIcon: '8808',
@@ -89,7 +80,7 @@ const contacts = ref([
         },
     },
     {
-        id: 4,
+        id: 3,
         title: 'Instagram',
         subtitle: '@hansss.18',
         idIcon: '32309',
