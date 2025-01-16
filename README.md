@@ -1,5 +1,17 @@
-# Vue 3 + Vite
+# Farhan Abdul Ghani - Portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Welcome to my portfolio repository! This is my personal portfolio website built with **Vue.js** and hosted on **GitHub Pages**. On this site, you can explore various projects I've worked on, my professional experience, and information about my skills and expertise in software development.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Key Features
+
+- **Responsive Design**: A portfolio layout that adapts to different screen sizes, from desktop to mobile devices.
+- **Interactive**: Built with Vue.js to create a dynamic and responsive web application.
+- **Project Showcase**: Displaying the projects I've worked on with detailed descriptions, technologies used, and screenshots.
+- **Contact Me**: A contact form that allows visitors to reach out to me directly.
+
+## How to Use
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/username/portfolio.git
