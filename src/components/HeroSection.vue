@@ -10,17 +10,14 @@
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
                         <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                            Hi, I'm <span
+                            {{ t('heroSection.hi') }} <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
                                 Farhan
                             </span>🤙🏻
                         </h1>
                     </div>
                     <p class="text-green-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-                        a skilled Flutter Mobile Developer with expertise in building
-                        high-performance apps, specializing in clean architecture, Riverpod state management, and API
-                        integrations. Currently working at PT Aesthetic Technology Indonesia, Farhan creates solutions
-                        for the beauty clinic industry, with plans for future healthcare sector expansion.
+                        {{ t('heroSection.desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
                         <button
@@ -58,8 +55,8 @@
                         </div>
                         <div
                             class="absolute h-full z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-16 rounded-full shadow-lg border border-primary">
-                            <img src="@/assets/top_picture.jpg" alt="Hero pic" width="500" height="auto" loading="lazy"
-                                class="w-full h-full rounded-full object-cover">
+                            <img src="/assets/images/top_picture.jpg" alt="Hero pic" width="500" height="auto"
+                                loading="lazy" class="w-full h-full rounded-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -70,5 +67,9 @@
 <script setup>
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 Aos.init();
 </script>

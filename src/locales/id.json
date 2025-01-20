@@ -1,0 +1,11 @@
+{
+    "welcome": "Selamat Datang",
+    "language": "Bahasa",
+    "aboutSection": {
+        "desc": "Saya adalah seorang profesional di bidang teknologi informasi dengan pengalaman dalam pengembangan perangkat lunak. Sejak memulai karir saya di dunia IT, saya telah terlibat dalam berbagai proyek yang membantu perusahaan dan klien dalam meningkatkan efisiensi operasional melalui solusi berbasis teknologi. Saya sangat bersemangat untuk terus belajar dan mengembangkan diri, serta memberikan kontribusi terbaik dalam setiap proyek yang saya kerjakan. Dengan lebih dari 7 tahun pengalaman, saya memiliki keterampilan dalam manajemen proyek, pengembangan perangkat lunak, dan penerapan solusi teknologi yang inovatif."
+    },
+    "heroSection": {
+        "hi": "Hallo, saya",
+        "desc": "Seorang Flutter Mobile Developer yang terampil dengan keahlian dalam membangun aplikasi berkinerja tinggi, mengkhususkan diri dalam arsitektur yang bersih, manajemen state menggunakan Riverpod, dan integrasi API. Saat ini bekerja di PT Aesthetic Technology Indonesia, Farhan menciptakan solusi untuk industri klinik kecantikan, dengan rencana ekspansi ke sektor layanan kesehatan di masa depan."
+    }
+  }

@@ -10,7 +10,7 @@
           <ExperienceAndSkillSection />
           <LatestProjectSection />
           <ContactSection />
-          <TestimonialsSection />
+          <!-- <TestimonialsSection /> -->
           <FooterSection />
           <BackToTop />
         </div>
@@ -32,7 +32,7 @@ import AboutSection from "./components/AboutSection.vue";
 import ExperienceAndSkillSection from "./components/ExperienceAndSkillSection.vue";
 import LatestProjectSection from "./components/LatestProjectSection.vue";
 import ContactSection from "./components/ContactSection.vue";
-import TestimonialsSection from "./components/TestimonialsSection.vue";
+// import TestimonialsSection from "./components/TestimonialsSection.vue";
 import FooterSection from "./components/FooterSection.vue";
 import BackToTop from "./components/BackToTop.vue";
 import LoadingSpinner from "./components/LoadingSpinner.vue";

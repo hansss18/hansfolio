@@ -1,7 +1,7 @@
 <template>
     <header class="flex justify-between items-center p-6 bg-opacity-50 relative z-20">
         <div>
-            <img src="/src/assets/logo.png" alt="logo-hans" class="h-20 w-auto">
+            <img src="/assets/icons/logo.png" alt="logo-hans" class="h-20 w-auto">
         </div>
         <!-- Mobile Toggle Button -->
         <div class="md:hidden z-30">
@@ -28,13 +28,22 @@
                         {{ item.name }}
                     </a>
                 </li>
+                <li>
+                    <select v-model="currentLocale" @change="changeLanguage"
+                        class="text-white bg-transparent border border-white rounded px-2 py-1">
+                        <option v-for="lang in languages" :key="lang.code" :value="lang.code">
+                            {{ lang.name }}
+                        </option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const menus = ref([
     { name: 'Service', href: '#services' },
@@ -53,4 +62,22 @@ const scrollToSection = (href) => {
         section.scrollIntoView({ behavior: 'smooth' })
     }
 }
+
+const { locale } = useI18n();
+
+const languages = ref([
+    { code: 'en', name: 'English' },
+    { code: 'id', name: 'Bahasa Indonesia' },
+]);
+
+const currentLocale = computed({
+    get: () => locale.value,
+    set: (newLocale) => {
+        locale.value = newLocale;
+    },
+});
+
+const changeLanguage = () => {
+    console.log(`Language changed to: ${locale.value}`);
+};
 </script>

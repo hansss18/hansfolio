@@ -29,11 +29,9 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">About</span>
                     Me
                 </h2>
-                <p class="text-base lg:text-lg mt-8 py-8"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veniam velit eaque voluptas quidem nostrum nemo facere ex aliquam laborum officiis reprehenderit
-                    tenetur quae necessitatibus quod distinctio sit ad, maxime magnam adipisci quam doloremque.
-                    Similique ea, possimus accusantium soluta animi quam atque quasi deleniti impedit, nulla, minima
-                    distinctio assumenda architecto dignissimos.</p>
+                <p class="text-base lg:text-lg mt-8 py-8">
+                    {{ t('aboutSection.desc') }}
+                </p>
                 <div class="flex justify-center items-center pt-8">
                     <div class="grid grid-cols-3 gap-4 max-w-lg">
                         <div v-for="stat in stats" :key="stat.id"
@@ -50,6 +48,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const data = ref(null);
 const loading = ref(true);
@@ -67,7 +68,7 @@ const educations = ref([
 const stats = ref([
     {
         id: 1,
-        value: '+200',
+        value: '+5',
         label: 'Happy Client',
     },
     {
@@ -77,7 +78,7 @@ const stats = ref([
     },
     {
         id: 3,
-        value: '+7',
+        value: '+2',
         label: 'Years Experience',
     }
 ]);

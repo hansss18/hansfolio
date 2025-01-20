@@ -1,0 +1,12 @@
+{
+    "welcome": "Welcome",
+    "language": "Language",
+    "aboutSection": {
+        "desc": "I am a professional in the field of information technology with experience in software development. Since starting my career in the IT world, I have been involved in various projects that help companies and clients improve operational efficiency through technology-driven solutions. I am passionate about continuous learning and personal development, and I aim to contribute my best to every project I work on. With over 7 years of experience, I possess skills in project management, software development, and implementing innovative technology solutions."
+    },
+    "heroSection": {
+        "hi": "Hi, I'm",
+        "desc": "a skilled Flutter Mobile Developer with expertise in building high-performance apps, specializing in clean architecture, Riverpod state management, and APIintegrations. Currently working at PT Aesthetic Technology Indonesia, Farhan creates solutions for the beauty clinic industry, with plans for future healthcare sector expansion."
+    }
+    
+  }

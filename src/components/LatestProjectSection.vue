@@ -67,61 +67,21 @@ import { computed, ref } from 'vue';
 const projects = ref([
     {
         id: 1,
-        category: 'web development',
-        image: '/hansfolio/assets/project.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
+        category: 'Mobile App',
+        image: '/hansfolio/assets/images/projects/benings.png',
+        title: 'Benings App',
+        description: 'Aplikasi mobile yang memudahkan pengguna untuk login, mendaftar akun, dan melakukan pemesanan layanan secara online dengan cepat dan praktis.',
+        technologies: ['Flutter', 'Android', 'IOS'],
         githubURL: '',
         webURL: ''
     },
     {
         id: 2,
         category: 'Mobile App',
-        image: '/hansfolio/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        githubURL: '',
-        webURL: ''
-    },
-    {
-        id: 3,
-        category: 'web development',
-        image: '/hansfolio/assets/project.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        githubURL: '',
-        webURL: ''
-    },
-    {
-        id: 4,
-        category: 'Mobile App',
-        image: '/hansfolio/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        githubURL: '',
-        webURL: ''
-    },
-    {
-        id: 5,
-        category: 'web development',
-        image: '/hansfolio/assets/project.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
-        githubURL: '',
-        webURL: ''
-    },
-    {
-        id: 6,
-        category: 'Mobile App',
-        image: '/hansfolio/assets/mobile.jpg',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, voluptates veritatis exercitationem delectus impedit corrupti temporibus, eum tempore nulla expedita omnis, itaque earum sit voluptas beatae assumenda voluptatibus architecto eligendi!',
-        technologies: ['vue.js 3', 'vuex', 'Express'],
+        image: '/hansfolio/assets/images/projects/aestech.png',
+        title: 'Aestech Customer',
+        description: 'Aplikasi yang dirancang untuk memudahkan pelanggan dalam melakukan transaksi dan menemukan lokasi klinik terdekat melalui fitur maps interaktif.',
+        technologies: ['Flutter', 'Android', 'IOS'],
         githubURL: '',
         webURL: ''
     },
