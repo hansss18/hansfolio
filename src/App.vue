@@ -39,6 +39,10 @@ import LoadingSpinner from "./components/LoadingSpinner.vue";
 
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'));
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
+console.log('API Key:', apiKey);
+
 </script>
 <style>
 * {
