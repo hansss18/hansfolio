@@ -15,11 +15,11 @@
         "list": [
             {
                 "name": "Mobile Developer",
-                "description": "Develop mobile applications using <span class=\"text-blue-500\">Flutter</span> for cross-platform development."
+                "description": "Develop mobile applications using Flutter for cross-platform development."
             },
             {
                 "name": "Web Development",
-                "description": "Build modern web applications using <span class=\"text-green-500\">Vue.js</span> for dynamic user interfaces."
+                "description": "Build modern web applications using Vue.js for dynamic user interfaces."
             }
         ]
     },

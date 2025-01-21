@@ -17,9 +17,11 @@
                         class="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl">
                         {{ service.name }}
                     </h3>
-                    <p class="text-gray pt-4 text-sm group-hover:text-white md:text-base"
-                        v-html="langs(`${service.description}`)">
+                    <p class="text-gray pt-4 text-sm group-hover:text-white md:text-base">
+                        <span
+                            v-html="langs(service.description).replace('Flutter', '<span class=\'text-blue-500\'>Flutter</span>').replace('Vue.js', '<span class=\'text-green-500\'>Vue.js</span>')"></span>
                     </p>
+
                 </div>
             </div>
         </div>

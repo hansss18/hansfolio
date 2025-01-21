@@ -15,11 +15,11 @@
         "list": [
             {
                 "name": "Pengembang Mobile",
-                "description": "Mengembangkan aplikasi mobile menggunakan <span class=\"text-blue-500\">Flutter</span> untuk pengembangan lintas platform."
+                "description": "Mengembangkan aplikasi mobile menggunakan Flutter untuk pengembangan lintas platform."
             },
             {
                 "name": "Pengembangan Web",
-                "description": "Membangun aplikasi web modern menggunakan <span class=\"text-green-500\">Vue.js</span> untuk antarmuka pengguna yang dinamis."
+                "description": "Membangun aplikasi web modern menggunakan Vue.js untuk antarmuka pengguna yang dinamis."
             }
         ]
     },
