@@ -8,8 +8,9 @@
         </div>
         <div class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 xl:px-16">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
-                <h2 class="text-4xl font-bold text-white text-left mb-4">My
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Skills</span>
+                <h2 class="text-4xl font-bold text-white text-left mb-4">{{ langs("titleSkill[0]") }}
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{{
+                        langs("titleSkill[1]") }}</span>
                 </h2>
                 <div class="mt-8" v-for="skill in skills" :key="skill.id">
                     <div class="flex items-end justify-between" data-aos="fade-right">
@@ -24,7 +25,8 @@
                 </div>
             </div>
             <div data-aos="flip-left">
-                <h2 class="text-4xl font-bold text-white text-left mb-8 md:text-center md:mt-0 mt-8">My Experiences</h2>
+                <h2 class="text-4xl font-bold text-white text-left mb-8 md:text-center md:mt-0 mt-8">{{
+                    langs("titleExperience") }}</h2>
                 <div class="space-y-8 py-8" data-aos="fade-left">
                     <div v-for="experience in experiences" :key="experience.id"
                         class="flex items-center rounded-xl p-4 bg-[#111a3e] shadow-lg border border-[#1f1641]">
@@ -37,7 +39,7 @@
                                 {{ experience.role }}
                             </h3>
                             <p class="text-white">{{ experience.company }}</p>
-                            <p class="text-white">{{ experience.date }}</p>
+                            <p class="text-white">{{ langs(experience.date) }}</p>
                         </div>
                     </div>
                 </div>
@@ -48,6 +50,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const langs = (key) => useI18n().t(`experienceAndSkillSection.${key}`);
 
 const skills = ref([
     {
@@ -77,13 +82,13 @@ const experiences = ref([
         id: 1,
         role: 'Intern Full-stack Developer',
         company: 'PT. Bejana Investidata Globalindo',
-        date: 'Aug 2022 - December 2022'
+        date: 'period[0]'
     },
     {
         id: 2,
         role: 'Mobile Developer',
         company: 'PT. Aesthetic Teknologi Indonesia',
-        date: 'Jan 2023 - Now'
+        date: 'period[1]'
     }
 ]);
 </script>

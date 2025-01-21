@@ -1,7 +1,7 @@
 <template>
     <section class="text-white mt-20" id="services">
         <div class="px-4 xl:pl-16">
-            <h2 class="text-4xl font-bold text-white mb-4">My Services</h2>
+            <h2 class="text-4xl font-bold text-white mb-4">{{ langs('title') }}</h2>
         </div>
         <div
             class="py-8 xl:px-16 sm:py-16 grid grid-cols-1 gap-16 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-2">
@@ -17,7 +17,8 @@
                         class="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl">
                         {{ service.name }}
                     </h3>
-                    <p class="text-gray pt-4 text-sm group-hover:text-white md:text-base" v-html="service.description">
+                    <p class="text-gray pt-4 text-sm group-hover:text-white md:text-base"
+                        v-html="langs(`${service.description}`)">
                     </p>
                 </div>
             </div>
@@ -27,19 +28,22 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const langs = (key) => useI18n().t(`serviceSection.${key}`);
 
 const services = ref([
     {
         id: 1,
         icon: 'https://img.icons8.com/?size=100&id=qTi7dvhQWqxW&format=png&color=ffffff',
         name: 'Mobile Developer',
-        description: 'Develop mobile applications using <span class="text-blue-500">Flutter</span> for cross-platform development.'
+        description: 'list[0].description'
     },
     {
         id: 2,
         icon: 'https://img.icons8.com/ios-filled/100/ffffff/google-code.png',
         name: 'Web Development',
-        description: 'Build modern web applications using <span class="text-green-500">Vue.js</span> for dynamic user interfaces.'
+        description: 'list[0].description'
     },
 ]);
 </script>

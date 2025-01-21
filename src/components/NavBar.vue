@@ -21,11 +21,11 @@
             isMenuOpen ? 'block' : 'hidden'
         ]">
             <ul class="flex flex-col items-center space-y-5 md:flex-row md:space-x-5 md:space-y-0">
-                <li v-for="item in menus" :key="item.name">
-                    <a :href="item.href"
+                <li v-for="menu in menus" :key="menu.name">
+                    <a :href="menu.href"
                         class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
-                        @click="scrollToSection(item.href)">
-                        {{ item.name }}
+                        @click="scrollToSection(menu.href)">
+                        {{ langs(`${menu.name}`) }}
                     </a>
                 </li>
                 <li>
@@ -45,13 +45,15 @@
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+const langs = (key) => useI18n().t(`navBar.${key}`);
+
 const menus = ref([
-    { name: 'Service', href: '#services' },
-    { name: 'About Me', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'service', href: '#services' },
+    { name: 'aboutMe', href: '#about' },
+    { name: 'skills', href: '#skills' },
+    { name: 'projects', href: '#projects' },
+    // { name: 'Testimonials', href: '#testimonials' },
+    { name: 'contact', href: '#contact' },
 ]);
 
 const isMenuOpen = ref(false);

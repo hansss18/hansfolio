@@ -1,12 +1,10 @@
 <template>
     <section class="text-white mt-20" id="contact">
-        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">Let's Connect</h2>
+        <h2 class="text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">{{ langs("title") }}</h2>
         <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8 items-center" data-aos="zoom-in-up">
             <div>
                 <p class="text-[#adb7be]">
-                    I'm here to help. Whether you have questions or want to discuss how we can collaborate, feel free to
-                    reach out through any of the options below. I'm always ready to listen and provide the best
-                    solutions for your needs. Get in touch now, I'd love to hear your story!
+                    {{ langs("desc") }}
                 </p>
                 <div v-for="contact in contacts" :key="contact.id" class="col-lg-4 col-mb-4 mb-lg-0 mt-5 mr-8">
                     <a :href="contact.onclick()" target="_blank" rel="noopener noreferrer"
@@ -59,6 +57,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const langs = (key) => useI18n().t(`contactSection.${key}`);
 
 const contacts = ref([
     {

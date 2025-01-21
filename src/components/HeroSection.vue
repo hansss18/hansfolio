@@ -10,14 +10,14 @@
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
                         <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                            {{ t('heroSection.hi') }} <span
+                            {{ $t('heroSection.hi') }} <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
                                 Farhan
                             </span>🤙🏻
                         </h1>
                     </div>
                     <p class="text-green-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-                        {{ t('heroSection.desc') }}
+                        {{ $t('heroSection.desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
                         <button
@@ -67,9 +67,5 @@
 <script setup>
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useI18n } from 'vue-i18n';
-
-const { t } = useI18n();
-
 Aos.init();
 </script>

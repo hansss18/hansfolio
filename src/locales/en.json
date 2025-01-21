@@ -1,12 +1,64 @@
 {
-    "welcome": "Welcome",
-    "language": "Language",
-    "aboutSection": {
-        "desc": "I am a professional in the field of information technology with experience in software development. Since starting my career in the IT world, I have been involved in various projects that help companies and clients improve operational efficiency through technology-driven solutions. I am passionate about continuous learning and personal development, and I aim to contribute my best to every project I work on. With over 7 years of experience, I possess skills in project management, software development, and implementing innovative technology solutions."
+    "navBar": {
+        "service" : "Service",
+        "aboutMe" : "About Me",
+        "skills" : "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
     },
     "heroSection": {
         "hi": "Hi, I'm",
-        "desc": "a skilled Flutter Mobile Developer with expertise in building high-performance apps, specializing in clean architecture, Riverpod state management, and APIintegrations. Currently working at PT Aesthetic Technology Indonesia, Farhan creates solutions for the beauty clinic industry, with plans for future healthcare sector expansion."
+        "desc": "a skilled Flutter Mobile Developer with expertise in building high-performance apps, specializing in clean architecture, Riverpod state management, and APIintegrations. Currently working at PT Aesthetic Technology Indonesia, I creates solutions for the beauty clinic industry, with plans for future healthcare sector expansion."
+    },
+    "serviceSection": {
+        "title": "My Services",
+        "list": [
+            {
+                "name": "Mobile Developer",
+                "description": "Develop mobile applications using <span class=\"text-blue-500\">Flutter</span> for cross-platform development."
+            },
+            {
+                "name": "Web Development",
+                "description": "Build modern web applications using <span class=\"text-green-500\">Vue.js</span> for dynamic user interfaces."
+            }
+        ]
+    },
+    "aboutSection": {
+        "titleEdu": "My Education",
+        "titleAbout": [
+            "More",
+            "about",
+            "me"
+        ],
+        "educations": [
+            "D3 - Management Informatics"
+        ],
+        "desc": "I am a professional in the field of information technology with experience in software development. Since starting my career in the IT world, I have been involved in various projects that help companies and clients improve operational efficiency through technology-driven solutions. I am passionate about continuous learning and personal development, and I aim to contribute my best to every project I work on. With over 2 years of experience, I possess skills in project management, software development, and implementing innovative technology solutions."
+    },
+    "experienceAndSkillSection": {
+        "titleSkill": [
+            "My",
+            "Skills"
+        ],
+        "titleExperience": "My Experiences",
+        "period":[
+            "Aug 2022 - December 2022",
+            "Jan 2023 - Now"
+        ]
+    },
+    "latestProjectSection": {
+        "title": "My Latest Projects",
+        "projects": {
+            "desc": [
+                "A mobile application that allows users to log in, register for an account, and book services online quickly and conveniently.",
+                "An application designed to make it easier for customers to make transactions and find the location of the nearest clinic through the interactive maps feature."
+            ]
+        },
+        "all": "all"
+    },
+    "contactSection": {
+        "title": "Let's Connect",
+        "desc": "I'm here to help. Whether you have questions or want to discuss how we can collaborate, feel free to reach out through any of the options below. I'm always ready to listen and provide the best solutions for your needs. Get in touch now, I'd love to hear your story!"
     }
-    
   }
+  

@@ -45,7 +45,7 @@
                     </div>
                     <div class="text-white rounded-b-xl mt-3 bg-[#111a3e] shadow-lg border border-[#1f1641] py-6 px-4">
                         <h3 class="text-lg font-semibold uppercase lg:text-xl"> {{ project.title }}</h3>
-                        <p class="text-[#ADB7BE]">{{ project.description }}</p>
+                        <p class="text-[#ADB7BE]">{{ langs(`projects.desc[${project.description}]`) }}</p>
                         <div class="flex flex-wrap p-2.5">
                             <div v-for="technology in project.technologies" :key="technology.id"
                                 class="text-center ml-1 mt-1 rounded-3xl bg-[#111827]"
@@ -62,6 +62,9 @@
 
 <script setup>
 import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const langs = (key) => useI18n().t(`latestProjectSection.${key}`);
 
 
 const projects = ref([
@@ -70,7 +73,7 @@ const projects = ref([
         category: 'Mobile App',
         image: '/hansfolio/assets/images/projects/benings.png',
         title: 'Benings App',
-        description: 'Aplikasi mobile yang memudahkan pengguna untuk login, mendaftar akun, dan melakukan pemesanan layanan secara online dengan cepat dan praktis.',
+        description: 0,
         technologies: ['Flutter', 'Android', 'IOS'],
         githubURL: '',
         webURL: ''
@@ -80,7 +83,7 @@ const projects = ref([
         category: 'Mobile App',
         image: '/hansfolio/assets/images/projects/aestech.png',
         title: 'Aestech Customer',
-        description: 'Aplikasi yang dirancang untuk memudahkan pelanggan dalam melakukan transaksi dan menemukan lokasi klinik terdekat melalui fitur maps interaktif.',
+        description: 1,
         technologies: ['Flutter', 'Android', 'IOS'],
         githubURL: '',
         webURL: ''

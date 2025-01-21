@@ -1,11 +1,63 @@
 {
-    "welcome": "Selamat Datang",
-    "language": "Bahasa",
-    "aboutSection": {
-        "desc": "Saya adalah seorang profesional di bidang teknologi informasi dengan pengalaman dalam pengembangan perangkat lunak. Sejak memulai karir saya di dunia IT, saya telah terlibat dalam berbagai proyek yang membantu perusahaan dan klien dalam meningkatkan efisiensi operasional melalui solusi berbasis teknologi. Saya sangat bersemangat untuk terus belajar dan mengembangkan diri, serta memberikan kontribusi terbaik dalam setiap proyek yang saya kerjakan. Dengan lebih dari 7 tahun pengalaman, saya memiliki keterampilan dalam manajemen proyek, pengembangan perangkat lunak, dan penerapan solusi teknologi yang inovatif."
+    "navBar": {
+        "service" : "Layanan",
+        "aboutMe" : "Tentang saya",
+        "skills" : "Skill",
+        "projects": "Project",
+        "contact": "Kontak"
     },
     "heroSection": {
         "hi": "Hallo, saya",
-        "desc": "Seorang Flutter Mobile Developer yang terampil dengan keahlian dalam membangun aplikasi berkinerja tinggi, mengkhususkan diri dalam arsitektur yang bersih, manajemen state menggunakan Riverpod, dan integrasi API. Saat ini bekerja di PT Aesthetic Technology Indonesia, Farhan menciptakan solusi untuk industri klinik kecantikan, dengan rencana ekspansi ke sektor layanan kesehatan di masa depan."
+        "desc": "Seorang Flutter Mobile Developer yang terampil dengan keahlian dalam membangun aplikasi berkinerja tinggi, mengkhususkan diri dalam arsitektur yang bersih, manajemen state menggunakan Riverpod, dan integrasi API. Saat ini bekerja di PT Aesthetic Technology Indonesia, Saya menciptakan solusi untuk industri klinik kecantikan, dengan rencana ekspansi ke sektor layanan kesehatan di masa depan."
+    },
+    "serviceSection": {
+        "title": "Layanan Saya",
+        "list": [
+            {
+                "name": "Pengembang Mobile",
+                "description": "Mengembangkan aplikasi mobile menggunakan <span class=\"text-blue-500\">Flutter</span> untuk pengembangan lintas platform."
+            },
+            {
+                "name": "Pengembangan Web",
+                "description": "Membangun aplikasi web modern menggunakan <span class=\"text-green-500\">Vue.js</span> untuk antarmuka pengguna yang dinamis."
+            }
+        ]
+    },
+    "aboutSection": {
+        "titleEdu": "Pendidikan Saya",
+        "titleAbout": [
+            "Lebih lanjut",
+            "tentang",
+            "saya"
+        ],
+        "educations": [
+            "D3 - Manajemen Informatika"
+        ],
+        "desc": "Saya adalah seorang profesional di bidang teknologi informasi dengan pengalaman dalam pengembangan perangkat lunak. Sejak memulai karir saya di dunia IT, saya telah terlibat dalam berbagai proyek yang membantu perusahaan dan klien dalam meningkatkan efisiensi operasional melalui solusi berbasis teknologi. Saya sangat bersemangat untuk terus belajar dan mengembangkan diri, serta memberikan kontribusi terbaik dalam setiap proyek yang saya kerjakan. Dengan lebih dari 2 tahun pengalaman, saya memiliki keterampilan dalam manajemen proyek, pengembangan perangkat lunak, dan penerapan solusi teknologi yang inovatif."
+    },
+    "experienceAndSkillSection": {
+        "titleSkill": [
+            "Kemampuan",
+            "Saya"
+        ],
+        "titleExperience": "Pengalaman Saya",
+        "period":[
+            "Aug 2022 - Desember 2022",
+            "Jan 2023 - Sekarang"
+        ]
+    },
+    "latestProjectSection": {
+        "title": "Project Terbaru Saya",
+        "projects": {
+            "desc": [
+                "Aplikasi mobile yang memudahkan pengguna untuk login, mendaftar akun, dan melakukan pemesanan layanan secara online dengan cepat dan praktis.",
+                "Aplikasi yang dirancang untuk memudahkan pelanggan dalam melakukan transaksi dan menemukan lokasi klinik terdekat melalui fitur maps interaktif."
+            ]
+        },
+        "all": "semua"
+    },
+    "contactSection": {
+        "title": "Mari Terhubung",
+        "desc": "Saya di sini untuk membantu. Jika Anda memiliki pertanyaan atau ingin mendiskusikan bagaimana kita dapat berkolaborasi, jangan ragu untuk menghubungi saya melalui salah satu opsi di bawah ini. Saya selalu siap untuk mendengarkan dan memberikan solusi terbaik untuk kebutuhan Anda. Hubungi saya sekarang, saya ingin sekali mendengar cerita Anda!"
     }
   }
