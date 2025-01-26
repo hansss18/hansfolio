@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <select v-model="currentLocale" @change="changeLanguage"
+                    <select v-model="currentLocale"
                         class="text-white bg-transparent border border-white rounded px-2 py-1">
                         <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                             {{ lang.name }}
@@ -78,8 +78,4 @@ const currentLocale = computed({
         locale.value = newLocale;
     },
 });
-
-const changeLanguage = () => {
-    console.log(`Language changed to: ${locale.value}`);
-};
 </script>

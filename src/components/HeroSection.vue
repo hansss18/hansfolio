@@ -1,4 +1,4 @@
-<template>
+`<template>
     <section class="relative w-full" data-aos="zoom-in-up">
         <div class="absolute top-0 inset-x-0 h-64 flex items-start">
             <div class="h-24 w-2/3 bg-gradient-to-br from-[#570cac] blur-2xl invisible opacity-40"></div>
@@ -26,25 +26,33 @@
                                 class="absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-primary border-2 border-transparent"></span>
                             <span class="relative flex items-center justify-center text-white">Hire Me</span>
                         </button>
-                        <button
-                            class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
-                            <div
-                                class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative">
-                                <div class="svg-container">
+                        <div class="relative" @mouseenter="showMenu = true" @mouseleave="showMenu = false">
+                            <button
+                                class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
+                                <div class="flex items-center">
                                     <svg class="download-icon" width="18" height="22" viewBox="0 0 18 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path class="download-arrow" d="M13 9L9 13M9 13L5 9M9 13V1" stroke="#f59e0b"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M1 17V18C1 18.7956 1.31607 19.5587 1.87868 20.1213C2.44129
-                                            20.6839 3.20435 21 4 21H14C14.7956 21 15.5587 20.6839 16.1213
-                                            20.1213C16.6839 19.5587 17 18.7956 17 18V17" stroke="#f59e0b"
-                                            stroke-width="2" stroke-linecap="round" />
+                                        <path d="M13 9L9 13M9 13L5 9M9 13V1" stroke="#f59e0b" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M1 17V18C1 18.7956 1.31607 19.5587 1.87868 20.1213C2.44129 20.6839 3.20435 21 4 21H14C14.7956 21 15.5587 20.6839 16.1213 20.1213C16.6839 19.5587 17 18.7956 17 18V17"
+                                            stroke="#f59e0b" stroke-width="2" stroke-linecap="round" />
                                     </svg>
-                                    <div class="download-loader text-white hidden"></div>
+                                    <span class="pl-2 text-primary">Download Resume</span>
                                 </div>
-                                <a href="/resume" download="resume.pdf" class="pl-2 text-primary"> Download resume</a>
+                            </button>
+                            <div v-if="showMenu"
+                                class="absolute top-12 left-0 w-max bg-white border border-gray-200 shadow-lg rounded-lg z-50">
+                                <a href="/hansfolio/assets/resume.pdf" download="cv-Farhan.pdf"
+                                    class="block px-4 py-2 w-full text-left text-black hover:bg-gray-100">
+                                    Download CV
+                                </a>
+                                <button @click="downloadPortfolio"
+                                    class="block px-4 py-2 w-full text-left hover:bg-gray-100">
+                                    Download Portfolio
+                                </button>
                             </div>
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="lg:h-full md:flex">
@@ -63,9 +71,90 @@
             </div>
         </div>
     </section>
+
+    <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-auto max-w-full">
+            <h2 class="text-lg font-semibold mb-4">Choose File Format</h2>
+            <p class="text-gray-600 mb-6">Please select the format for the portfolio file:</p>
+            <div class="flex justify-between">
+                <button v-for="(format, index) in fileFormats" :key="index" @click="downloadPortfolioFile(format)"
+                    :class="getButtonClass(format)" class="px-4 py-2 mx-2 rounded text-white hover:bg-opacity-75">
+                    Download {{ format.toUpperCase() }}
+                </button>
+                <button @click="closeModal" class="px-4 py-2 mx-2 bg-gray-400 text-white rounded hover:bg-gray-500">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
 </template>
 <script setup>
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+
+const { locale } = useI18n();
+
 Aos.init();
+
+const showMenu = ref(false);
+const showModal = ref(false);
+const fileFormats = ['pdf', 'svg', 'pptx', 'jpg', 'png'];
+
+const downloadPortfolio = () => {
+    showModal.value = true;
+};
+
+
+
+const downloadPortfolioFile = (format) => {
+    const lang = locale.value === "id" ? "id" : "en";
+
+    console.info(lang);
+    let fileName;
+
+    if (format === "pptx" || format === "pdf") {
+        fileName = `hansfolio-${lang}.${format}`;
+    } else if (["png", "svg", "jpg"].includes(format)) {
+        fileName = `hansfolio-${lang}-${format}.zip`;
+    } else {
+        console.error("Unsupported format!");
+        return;
+    }
+
+    const filePath = `/hansfolio/assets/portfolio/${lang}/${fileName}`;
+
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = fileName;
+    link.click();
+
+    closeModal();
+};
+
+
+
+const closeModal = () => {
+    showModal.value = false;
+};
+
+const getButtonClass = (format) => {
+    switch (format) {
+        case 'pdf':
+            return 'bg-red-500 hover:bg-red-600';
+        case 'svg':
+            return 'bg-green-500 hover:bg-green-600';
+        case 'pptx':
+            return 'bg-orange-500 hover:bg-orange-600';
+        case 'jpg':
+            return 'bg-yellow-500 hover:bg-yellow-600';
+        case 'png':
+            return 'bg-blue-500 hover:bg-blue-600';
+        default:
+            return 'bg-gray-400';
+    }
+};
+
 </script>
