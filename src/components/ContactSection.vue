@@ -89,5 +89,14 @@ const contacts = ref([
             return `https://www.instagram.com/${this.subtitle.substring(1)}`;
         },
     },
+    {
+        id: 4,
+        title: 'Github',
+        subtitle: 'hansss18',
+        idIcon: '106562',
+        onclick() {
+            return `https://github.com/${this.subtitle}`;
+        }
+    }
 ]);
 </script>
