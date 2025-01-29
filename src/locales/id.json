@@ -8,7 +8,12 @@
     },
     "heroSection": {
         "hi": "Hallo, saya",
-        "desc": "Seorang Flutter Mobile Developer yang terampil dengan keahlian dalam membangun aplikasi berkinerja tinggi, mengkhususkan diri dalam arsitektur yang bersih, manajemen state menggunakan Riverpod, dan integrasi API. Saat ini bekerja di PT Aesthetic Technology Indonesia, Saya menciptakan solusi untuk industri klinik kecantikan, dengan rencana ekspansi ke sektor layanan kesehatan di masa depan."
+        "desc": "Seorang Flutter Mobile Developer yang terampil dengan keahlian dalam membangun aplikasi berkinerja tinggi, mengkhususkan diri dalam arsitektur yang bersih, manajemen state menggunakan Riverpod, dan integrasi API. Saat ini bekerja di PT Aesthetic Technology Indonesia, Saya menciptakan solusi untuk industri klinik kecantikan, dengan rencana ekspansi ke sektor layanan kesehatan di masa depan.",
+        "modal": {
+            "title": "Pilih Format File",
+            "subtitle": "Pilih format untuk file portofolio:",
+            "cancel": "Batal"
+        }
     },
     "serviceSection": {
         "title": "Layanan Saya",

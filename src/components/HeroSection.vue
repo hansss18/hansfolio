@@ -10,14 +10,14 @@
                 <div class="lg:py-6">
                     <div class="text-center lg:text-left">
                         <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                            {{ $t('heroSection.hi') }} <span
+                            {{ langs("hi") }} <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500">
                                 Farhan
                             </span>🤙🏻
                         </h1>
                     </div>
                     <p class="text-green-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-                        {{ $t('heroSection.desc') }}
+                        {{ langs("desc") }}
                     </p>
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
                         <button
@@ -74,15 +74,15 @@
 
     <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div class="bg-white rounded-lg shadow-lg p-6 w-auto max-w-full">
-            <h2 class="text-lg font-semibold mb-4">Choose File Format</h2>
-            <p class="text-gray-600 mb-6">Please select the format for the portfolio file:</p>
+            <h2 class="text-lg font-semibold mb-4">{{ langs("modal.title") }}</h2>
+            <p class="text-gray-600 mb-6">{{ langs("modal.subtitle") }}</p>
             <div class="flex justify-between">
                 <button v-for="(format, index) in fileFormats" :key="index" @click="downloadPortfolioFile(format)"
                     :class="getButtonClass(format)" class="px-4 py-2 mx-2 rounded text-white hover:bg-opacity-75">
                     Download {{ format.toUpperCase() }}
                 </button>
                 <button @click="closeModal" class="px-4 py-2 mx-2 bg-gray-400 text-white rounded hover:bg-gray-500">
-                    Cancel
+                    {{ langs("modal.cancel") }}
                 </button>
             </div>
         </div>
@@ -102,6 +102,8 @@ Aos.init();
 const showMenu = ref(false);
 const showModal = ref(false);
 const fileFormats = ['pdf', 'svg', 'pptx', 'jpg', 'png'];
+
+const langs = (key) => useI18n().t(`heroSection.${key}`);
 
 const downloadPortfolio = () => {
     showModal.value = true;
