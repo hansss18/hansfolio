@@ -72,21 +72,26 @@
         </div>
     </section>
 
-    <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white rounded-lg shadow-lg p-6 w-auto max-w-full">
-            <h2 class="text-lg font-semibold mb-4">{{ langs("modal.title") }}</h2>
-            <p class="text-gray-600 mb-6">{{ langs("modal.subtitle") }}</p>
-            <div class="flex justify-between">
+    <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div
+            class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl overflow-y-auto">
+            <h2 class="text-lg font-semibold mb-4 text-center">{{ langs("modal.title") }}</h2>
+            <p class="text-gray-600 mb-6 text-center">{{ langs("modal.subtitle") }}</p>
+
+            <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center">
                 <button v-for="(format, index) in fileFormats" :key="index" @click="downloadPortfolioFile(format)"
-                    :class="getButtonClass(format)" class="px-4 py-2 mx-2 rounded text-white hover:bg-opacity-75">
+                    :class="getButtonClass(format)"
+                    class="px-4 py-2 rounded text-white text-sm hover:bg-opacity-75 text-center">
                     Download {{ format.toUpperCase() }}
                 </button>
-                <button @click="closeModal" class="px-4 py-2 mx-2 bg-gray-400 text-white rounded hover:bg-gray-500">
-                    {{ langs("modal.cancel") }}
-                </button>
             </div>
+
+            <button @click="closeModal" class="mt-4 px-4 py-2 bg-gray-400 text-white rounded w-full hover:bg-gray-500">
+                {{ langs("modal.cancel") }}
+            </button>
         </div>
     </div>
+
 </template>
 <script setup>
 import Aos from 'aos';
